@@ -2,6 +2,7 @@
     "name": "react-pokemons-app",
     "version": "1.0.0",
     "description": "An awesome application to handle some pokemons.",
+    "homepage": "http://{modeuil}.github.io/{React-Pokemon_App}",
     "dependencies": {
       "@types/node": "12.11.1",
       "@types/react": "16.9.9",
@@ -15,7 +16,9 @@
     },
     "scripts": {
       "start": "react-scripts start",
-      "build": "export NODE_OPTIONS=--openssl-legacy-provider; gatsby build"
+      "build": "export NODE_OPTIONS=--openssl-legacy-provider; gatsby build",
+      "predeploy": "npm run build",
+      "deploy": "gh-pages -d build"
     },
     "eslintConfig": {
       "extends": "react-app"
